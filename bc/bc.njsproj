@@ -1,0 +1,204 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>bc</Name>
+    <RootNamespace>bc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c39cde91-e1cd-41f1-a1e0-6d8954ca131d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.ts</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".dockerignore" />
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="angular.json" />
+    <Content Include="bilichat.js" />
+    <Content Include="config.json" />
+    <Content Include="CONFIG.md" />
+    <Content Include="Dockerfile" />
+    <Content Include="Dockerfile.Official" />
+    <Content Include="doc\fubuki.jpg" />
+    <Content Include="doc\wx.png" />
+    <Content Include="doc\zfb.jpg" />
+    <Content Include="doc\zibi.png" />
+    <Content Include="e2e\protractor.conf.js" />
+    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="LICENSE" />
+    <Content Include="package-lock.json" />
+    <Content Include="BiliChat-master\package.json" />
+    <Content Include="README.md" />
+    <Content Include="BiliChat-master\src\app\alpha\alpha.component.css" />
+    <Content Include="BiliChat-master\src\app\alpha\alpha.component.html" />
+    <Content Include="BiliChat-master\src\app\alpha\chat-renderer\chat-renderer.component.css" />
+    <Content Include="BiliChat-master\src\app\alpha\chat-renderer\chat-renderer.component.html" />
+    <Content Include="BiliChat-master\src\app\alpha\chat-renderer\message\message.component.css" />
+    <Content Include="BiliChat-master\src\app\alpha\chat-renderer\message\message.component.html" />
+    <Content Include="BiliChat-master\src\app\alpha\chat-renderer\paid-message\paid-message.component.css" />
+    <Content Include="BiliChat-master\src\app\alpha\chat-renderer\paid-message\paid-message.component.html" />
+    <Content Include="BiliChat-master\src\app\app.component.css" />
+    <Content Include="BiliChat-master\src\app\app.component.html" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-message\message.component.css" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-message\message.component.html" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-paid-message\paid-message.component.css" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-paid-message\paid-message.component.html" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-renderer.component.css" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-renderer.component.html" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd.component.css" />
+    <Content Include="BiliChat-master\src\app\gkd\gkd.component.html" />
+    <Content Include="BiliChat-master\src\app\index-local\index-local.component.css" />
+    <Content Include="BiliChat-master\src\app\index-local\index-local.component.html" />
+    <Content Include="BiliChat-master\src\app\index\index.component.css" />
+    <Content Include="BiliChat-master\src\app\index\index.component.html" />
+    <Content Include="BiliChat-master\src\app\shared\yt-image\image.component.css" />
+    <Content Include="BiliChat-master\src\app\shared\yt-image\image.component.html" />
+    <Content Include="BiliChat-master\src\app\viewer\viewer.component.css" />
+    <Content Include="BiliChat-master\src\app\viewer\viewer.component.html" />
+    <Content Include="BiliChat-master\src\assets\.gitkeep" />
+    <Content Include="BiliChat-master\src\assets\i18n\en.json" />
+    <Content Include="BiliChat-master\src\assets\i18n\ja.json" />
+    <Content Include="BiliChat-master\src\assets\i18n\zh.json" />
+    <Content Include="BiliChat-master\src\assets\logo_icon.png" />
+    <Content Include="BiliChat-master\src\browserslist" />
+    <Content Include="BiliChat-master\src\favicon.ico" />
+    <Content Include="BiliChat-master\src\index.html" />
+    <Content Include="BiliChat-master\src\karma.conf.js" />
+    <Content Include="BiliChat-master\src\styles.css" />
+    <Content Include="BiliChat-master\src\tsconfig.app.json" />
+    <Content Include="BiliChat-master\src\tsconfig.server.json" />
+    <Content Include="BiliChat-master\src\tsconfig.spec.json" />
+    <Content Include="BiliChat-master\src\tslint.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <Content Include="webpack.server.config.js" />
+    <Content Include="libman.json" />
+    <Content Include="server.js" />
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BiliChat-master\" />
+    <Folder Include="doc\" />
+    <Folder Include="e2e\" />
+    <Folder Include="e2e\src\" />
+    <Folder Include="BiliChat-master\src\" />
+    <Folder Include="BiliChat-master\src\app\" />
+    <Folder Include="BiliChat-master\src\app\alpha\" />
+    <Folder Include="BiliChat-master\src\app\alpha\chat-renderer\" />
+    <Folder Include="BiliChat-master\src\app\alpha\chat-renderer\message\" />
+    <Folder Include="BiliChat-master\src\app\alpha\chat-renderer\paid-message\" />
+    <Folder Include="BiliChat-master\src\app\gkd\" />
+    <Folder Include="BiliChat-master\src\app\gkd\gkd-renderer\" />
+    <Folder Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-message\" />
+    <Folder Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-paid-message\" />
+    <Folder Include="BiliChat-master\src\app\index-local\" />
+    <Folder Include="BiliChat-master\src\app\index\" />
+    <Folder Include="BiliChat-master\src\app\shared\" />
+    <Folder Include="BiliChat-master\src\app\shared\yt-image\" />
+    <Folder Include="BiliChat-master\src\app\viewer\" />
+    <Folder Include="BiliChat-master\src\assets\" />
+    <Folder Include="BiliChat-master\src\assets\i18n\" />
+    <Folder Include="BiliChat-master\src\environments\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="server.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\alpha-routing.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\alpha.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\alpha.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\chat-renderer\chat-renderer.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\chat-renderer\chat-renderer.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\chat-renderer\message\message.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\alpha\chat-renderer\paid-message\paid-message.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\app.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\app.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\app.server.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\biliws.service.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\danmaku.def.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-message\message.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-paid-message\paid-message.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-renderer.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd-renderer\gkd-renderer.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd-routing.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\gkd\gkd.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\index-local\index-local-routing.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\index-local\index-local.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\index-local\index-local.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\index\index-routing.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\index\index.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\index\index.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\message-processor.service.spec.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\message-processor.service.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\shared\yt-image\image.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\app\viewer\viewer.component.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\environments\environment.official.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\environments\environment.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\main.server.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\main.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\polyfills.ts" />
+    <TypeScriptCompile Include="BiliChat-master\src\test.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
